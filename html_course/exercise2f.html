@@ -4,6 +4,10 @@
         color:rgb(0,113,133);
         border: none;
         cursor: pointer;
+        text-decoration: underline;
+    }
+    .amazon:hover{
+       color:red;
     }
     .price{
         background-color: white;
@@ -22,17 +26,12 @@
     width: 120px;
     border-radius: 20px;
     cursor: pointer;
+    transition: opacity 0.3s;
     }
-    .Buy-now{ 
-    background-color: rgb(255,216,20);
-    color:black;
-
-    border: none;
-    height: 29px;
-    width: 120px;
-    border-radius: 20px;
-    cursor: pointer;
+    .add-to-cart:active{
+        opacity: 0.45;
     }
+    
 </style>
 
 
@@ -48,6 +47,4 @@
 <button class="Add-to-cart">
     Add to cart
 </button>
-<buttton class="Buy-now">
-    Buy now
-</buttton>
+
