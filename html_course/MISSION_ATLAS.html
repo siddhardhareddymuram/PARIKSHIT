@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mission Atlas</title>
+    </head>
+    <style>
+        /* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* left & right separation */
+  align-items: center;            /* vertical centering */
+  padding: 16px 40px;
+  background-color: #000814;      /* solid dark background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  height: 48px;
+  width: auto;
+}
+
+/* Right side links */
+.nav-right {
+  display: flex;
+  gap: 32px; /* spacing between menu items */
+}
+
+/* Navbar links */
+.nav-right a {
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  color: #6fffe9;        /* cyan/space color */
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #ffffff;
+}
+
+    </style>
+    <body>
+        <header class="navbar">
+  <div class="nav-left">
+    <img src="logo.png" alt="Mission Atlas Logo" class="logo">
+  </div>
+
+  <nav class="nav-right">
+    <a href="#">TEAM</a>
+    <a href="#">ABOUT US</a>
+    <a href="#">SUBSYSTEMS</a>
+    <a href="#">PROJECTS</a>
+    <a href="#">RESEARCH</a>
+    <a href="#">FAQs</a>
+  </nav>
+</header>
+
+    </body>
+</html>
