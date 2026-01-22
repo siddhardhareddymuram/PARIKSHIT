@@ -20,12 +20,46 @@
       myArray.splice(0,1);
       console.log(myArray);
       */
-
+/*
       let i=1;
       while(i<=5){
         console.log(i);
         i++;
       }
+      for(let i=1;i<=5;i++){
+        console.log(i);
+      }
+
+      let ranodmNumber=0;
+      while(ranodmNumber<0.5){
+        ranodmNumber=Math.random();
+      }
+      console.log(ranodmNumber);
+      */
+     /*const todolist=[
+      'make dinner',
+      'wash clothes',
+      'complete EVS report'
+     ];
+     for(let i=0;i<=todolist.length-1;i++){
+      const value= todolist[i];
+     console.log(value);
+     }
+     */
+const nums=[1,1,3];
+let total=0;
+for(let i=0;i<nums.length;i++){
+  total+=nums[i];
+}
+console.log(total);
+
+const numsDoubled=[];
+
+for(let i=0;i<nums.length;i++){
+  const num=nums[i];
+  numsDoubled.push(num*2);
+}
+console.log(numsDoubled);
     </script>
 </body>
 </html>

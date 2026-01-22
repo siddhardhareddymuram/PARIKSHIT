@@ -5,15 +5,54 @@
 </head>
 <body>
     <p>Todo List</p>
-    <input placeholder="Todo name"
-    class="js-name-input">
-    <button onclick="
-    addTodo();">Add</button>
 
-   
-    <script src="scripts/todo-list.js">
-      
+    <input placeholder="Todo name" class="js-name-input">
+    <input type="date">
+    <button onclick="addTodo()">Add</button>
+
+    <div class="js-todo-list"></div>
+
+    <script>
+        const todolist = [ {
+            name: 'eat dinner',
+        dueDate:'2022-12-22'
+    },{ name:'make EVS report and PPT',
+    dueDate:'200-12-22'
+
+    }];
+
+        function renderTodoList() {
+            let todoListHTML = '';
+
+            for (let i = 0; i < todolist.length; i++) {
+                const todoObject = todolist[i];
+                const name=todoObject.name;
+                cosnt dueDate=todoObject.dueDate;
+                const html = 
+                `<p>
+                    ${name}  ${dueDate}
+                    <button onclick="
+                    todolist.splice(${i},1);
+                    renderTodoList();
+                    ">Delete</button>
+                </p>`;
+                todoListHTML += html;
+            }
+
+            document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+        }
+
+        function addTodo() {
+            const inputElement = document.querySelector('.js-name-input');
+            const name = inputElement.value;
+
+            todolist.push(name);
+            inputElement.value = '';
+
+            renderTodoList(); // refresh UI
+        }
+
+        renderTodoList(); // initial render
     </script>
 </body>
 </html>
-
